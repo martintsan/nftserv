@@ -48,10 +48,4 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: nftserv_production
-  username: nftserv
-  password: <%= ENV['NFTSERV_DATABASE_PASSWORD'] %>
-  encoding: utf8mb4
-  collation: utf8mb4_general_ci
-  pool: 5
+  url: <%= ENV['CLEARDB_DATABASE_URL'] %>
